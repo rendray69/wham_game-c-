@@ -10,7 +10,7 @@ class code
 	public:
 		void menus();
 		generate(int);
-		void rules(int);	
+		void rules();	
 		void guess(int);
 		void check(int arr[], int arr2[], int);
 	private:
