@@ -30,7 +30,7 @@ void code::menus()
 	int n = 4;
 	int a=0;
 	int choice;
-	cout<<"Select Level :	"<<endl;
+	cout<<"Select the Level :	"<<endl;
 	cout<<"1. Beginner		"<<endl;
 	cout<<"2. Intermediate	"<<endl;
 	cout<<"3. Advanced		"<<endl;
@@ -43,12 +43,8 @@ void code::menus()
 			system("cls");
 			c.generate(n);
 			a++;
-		}else if(choice == 2){
-			cout<<"Beta Version doesn't include levels\n";
-		}else if(choice == 3){
-			cout<<"Beta Version doesn't include levels\n";
 		}else{
-			cout<<"Beta Version doesn't include levels\n";
+			cout<<"Beta version doesn't provide this level\n";
 		}
 	}
 }
@@ -56,7 +52,7 @@ void code::menus()
 
 code::generate(int n){
 	srand(time(NULL));
-	cout<<"Type 4 number you guess, ex: 1234";
+	cout<<"Type any 4 numbers, e.g: 1234";
 	cout<<endl;
 	cout<<endl;
 	for(int i=0;i<n;i++){
@@ -82,13 +78,18 @@ code::generate(int n){
 }
 
 void code::guess(int a){
-	cout<<"Guess Number : ";
+	cout<<"Guess the Number : ";
 	cin>>answer;
-	for(int i=0;i<a;i++){
-		result[i] = answer[i] - '0';
+	if(sizeof(answer) < 4){
+		cout<<"Your answer must be consisted of 4 digits'";
+		cout<<endl;
+		guess(a);
+	}else{
+		for(int i=0;i<a;i++){
+			result[i] = answer[i] - '0';
+		}
+		check(result, rand0m, a);
 	}
-	
-	check(result, rand0m, a);
 }
 
 void code::check(int answer[], int rand0m[], int n){
@@ -107,7 +108,7 @@ void code::check(int answer[], int rand0m[], int n){
 	
 	coba += 1;
 	cout<<"-=====-==============-=================-"<<endl;
-	cout<<"| NO. | Your Guesses | Correct Answer  |"<<endl;
+	cout<<"| NO. | Your Guesses |  Correct Answer |"<<endl;
 	cout<<"|-===-|-============-|Position | Number|"<<endl;
 	cout<<"| "<<coba<<setw(7)<<"|   ";
 	for(int i=0;i<n;i++){
