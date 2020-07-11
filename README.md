@@ -1,9 +1,10 @@
 # wham_game-c-
 
+Created by the C++ programming language
+
 The way of playing this game is by guessing what numbers chosen by this game and to figure out which position are those numbers took place in sequence
 
-Created by the C++ programming language 
-The files are not included in the level
+P.S: Beta version doesn't provide this level
 
 The implemented algorithms are:
 - function
