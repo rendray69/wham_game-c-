@@ -1,9 +1,9 @@
 # wham_game-c-
 
-The point for completing this game is to guess the number provided by the program and guess it and its position
+The way of playing this game is by guessing what numbers chosen by this game and to figure out which position are those numbers took place in sequence
 
-Made by c++ programming language
-The files doesn't include levels
+Created by the C++ programming language 
+The files are not included in the level
 
 The implemented algorithms are:
 - function
